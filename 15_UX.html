@@ -13156,13 +13156,32 @@ div#notebook {
 
   
 
-  <div class="
+  <div class="nbinteract-hide_in
       cell border-box-sizing code_cell rendered">
     <div class="input">
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># IMPORT</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># HIDDEN</span>
+<span class="o">%</span><span class="k">env</span> GOOGLE_APPLICATION_CREDENTIALS=MyFirstProject2eda4e60986d.json
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+  </div>
+
+  
+
+  <div class="nbinteract-hide_in
+      cell border-box-sizing code_cell rendered">
+    <div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># HIDDEN</span>
+<span class="c1"># IMPORT</span>
 <span class="o">%</span><span class="k">matplotlib</span> inline
 <span class="kn">import</span> <span class="nn">csv</span>
 <span class="kn">import</span> <span class="nn">os</span>
@@ -13197,13 +13216,14 @@ div#notebook {
 
   
 
-  <div class="
+  <div class="nbinteract-hide_in
       cell border-box-sizing code_cell rendered">
     <div class="input">
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># UTILITY func</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># HIDDEN</span>
+<span class="c1"># UTILITY func</span>
 <span class="n">CUBE_SIZE</span> <span class="o">=</span> <span class="mi">250</span>
 <span class="n">EDGE_GAP</span> <span class="o">=</span> <span class="mi">50</span>
 <span class="n">HORIZ_TOLERANCE_FACTOR</span> <span class="o">=</span> <span class="mi">50</span>
@@ -13336,13 +13356,14 @@ div#notebook {
 
   
 
-  <div class="
+  <div class="nbinteract-hide_in
       cell border-box-sizing code_cell rendered">
     <div class="input">
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># UTIL 2</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># HIDDEN</span>
+<span class="c1"># UTIL 2</span>
 <span class="k">def</span> <span class="nf">find_match</span><span class="p">(</span><span class="n">big_img</span><span class="p">,</span> <span class="n">small_img</span><span class="p">):</span>
     <span class="n">match_map</span> <span class="o">=</span> <span class="n">match_template</span><span class="p">(</span><span class="n">big_img</span><span class="p">,</span> <span class="n">small_img</span><span class="p">)</span>
     <span class="n">offsets_arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">unravel_index</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">match_map</span><span class="p">),</span> <span class="n">match_map</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
@@ -13452,13 +13473,14 @@ div#notebook {
 
   
 
-  <div class="
+  <div class="nbinteract-hide_in
       cell border-box-sizing code_cell rendered">
     <div class="input">
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># READ crops</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># HIDDEN</span>
+<span class="c1"># READ crops</span>
 <span class="n">crops</span> <span class="o">=</span> <span class="p">{}</span>
 <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;crops.csv&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">csvfile</span><span class="p">:</span>
     <span class="n">reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">DictReader</span><span class="p">(</span><span class="n">csvfile</span><span class="p">,</span> <span class="n">fieldnames</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;file&quot;</span><span class="p">,</span><span class="s2">&quot;x_start&quot;</span><span class="p">,</span><span class="s2">&quot;y_start&quot;</span><span class="p">,</span><span class="s2">&quot;x_end&quot;</span><span class="p">,</span><span class="s2">&quot;y_end&quot;</span><span class="p">,</span><span class="s2">&quot;rotate&quot;</span><span class="p">))</span>
@@ -13484,13 +13506,14 @@ div#notebook {
 
   
 
-  <div class="
+  <div class="nbinteract-hide_in
       cell border-box-sizing code_cell rendered">
     <div class="input">
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># READ matches</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># HIDDEN</span>
+<span class="c1"># READ matches</span>
 <span class="n">matches</span> <span class="o">=</span> <span class="p">{}</span>
 <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;20181020_212330_pairs_final_flipped.csv&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">csvfile</span><span class="p">:</span> <span class="c1"># cubes_X3</span>
     <span class="n">reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">DictReader</span><span class="p">(</span><span class="n">csvfile</span><span class="p">,</span> <span class="n">fieldnames</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;fragmentAndSide&quot;</span><span class="p">,</span> 
