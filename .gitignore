@@ -1,3 +1,5 @@
 conda-forge//
 ipywidgets/
 menpo//
+temp/*
+!temp/.blank
