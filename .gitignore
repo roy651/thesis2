@@ -3,3 +3,5 @@ ipywidgets/
 menpo//
 temp/*
 !temp/.blank
+*.csv
+mypapyrusthesisproject.json
