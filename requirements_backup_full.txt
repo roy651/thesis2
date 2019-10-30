@@ -22,7 +22,7 @@ entrypoints==0.2.2
 ez-setup==0.9
 Fabric==1.14.0
 flasgger==0.8.0
-Flask==0.12.2
+Flask==1.0
 Flask-Compress==1.4.0
 Flask-SeaSurf==0.2.2
 future==0.16.0
